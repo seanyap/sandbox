@@ -19,6 +19,8 @@ prev.addEventListener('click', () => {
   }
 })
 
+// separate out update feature code from event listeners 
+// for improved readability and less duplicate
 function update() {
   circles.forEach((circle, index) => {
     if (index < currentActive) {
