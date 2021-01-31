@@ -25,6 +25,7 @@ body {
   transform: rotate(-20deg);
 }
 
+/* this container is for used to set position fixed so .circle can set position relative for button to position absolute*/
 .circle-container {
   position: fixed;
   top: -100px;
@@ -40,22 +41,23 @@ body {
   transition: transform 0.5s linear;
 }
 
+/* when and element has both .container & .show-nav class, style .circle */
 .container.show-nav .circle {
   transform: rotate(-70deg);
 }
 
- .circle button {
-   cursor: pointer;
-   position: absolute;
-   top: 45%;
-   left: 50%;
-   height: 100px;
-   background: transparent;
-   border: 0;
-   font-size: 26px;
-   color: #fff;
-   margin: 0;
- }
+.circle button {
+  cursor: pointer;
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  height: 100px;
+  background: transparent;
+  border: 0;
+  font-size: 26px;
+  color: #fff;
+  margin: 0;
+}
 
 .circle button:focus {
   outline: none;
@@ -71,8 +73,10 @@ body {
   transform-origin: top left;
 }
 
+/* when element has both .container and .show-nav, style the next(+ symbol) nav ul li element */
 .container.show-nav + nav ul li {
-  transform: translateX(0);
+  /* start outside of the box and then translate back into the box */
+  transform: translateX(0); 
   transition-delay: 0.3s;
 }
 
@@ -96,11 +100,13 @@ nav ul li {
   transition: transform 0.4s ease-in;
 }
 
+/* next list after first list */
 nav ul li + li {
   margin-left: 15px;
   transform: translateX(-150%);
 }
 
+/* third list */
 nav ul li + li + li {
   margin-left: 30px;
   transform: translateX(-200%);
