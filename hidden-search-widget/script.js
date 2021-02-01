@@ -1,13 +1,8 @@
 const search = document.querySelector('.search')
 const btn = document.querySelector('.btn')
-
-let isActive = false
+const input = document.querySelector('.input')
 
 btn.addEventListener('click', () => {
-  if (!isActive) {
-    search.classList.add('active')
-  } else {
-    search.classList.remove('active')
-  }
-  isActive = !isActive
+  search.classList.toggle('active')
+  input.focus()
 })
