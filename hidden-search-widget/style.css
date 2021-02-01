@@ -45,9 +45,11 @@ body {
 }
 
 .search.active .input {
+  /* widens the input width */
   width: 200px;
 }
 
 .search.active .btn {
+  /* pushes the button over when active class is added */
   transform: translateX(200px);
 }
